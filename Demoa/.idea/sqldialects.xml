@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/back-end/src/main/java/org/example/backend/Mapper/BlogMapper.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/back-end/src/main/java/org/example/backend/Mapper/LikeMapper.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/back-end/src/main/java/org/example/backend/Mapper/NotificationMapper.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/back-end/src/main/java/org/example/backend/Mapper/UserMapper.java" dialect="MySQL" />
+  </component>
+</project>

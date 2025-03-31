@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/devblog
+    #jdbc数据库链接 格式为：jdbc:mysql://数据库服务器地址:端口/数据库名
+    username: root
+    #数据库账号
+    password: Aiit#040629
+    #数据库密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #数据库驱动名
+server:
+   servlet:
+     session:
+       timeout: 1s
