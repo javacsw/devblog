@@ -11,6 +11,12 @@ const initUserData = () => {
       }
   )
 }
+
+const defaultAvatar = 'https://api.dicebear.com/9.x/micah/svg?seed=Oreo&backgroundColor=f0db4f,ffdfbf'
+const handleImageError = (e) => {
+  e.target.src = defaultAvatar
+}
+
 onMounted(() => {
   initUserData()
 })
@@ -32,7 +38,11 @@ onMounted(() => {
         <ThemeSwitch/>
 <!--        改成不固定的会找不到-->
         <div @click="router.push('/mycentent')" class="cursor-pointer">
-          <img v-if="useUserStore().user!== null" :src="useUserStore().user.avator" alt="User Avatar" class="h-8 rounded-full"/>
+          <img v-if="useUserStore().user!== null" 
+               :src="useUserStore().user.avator || defaultAvatar" 
+               @error="handleImageError"
+               alt="User Avatar" 
+               class="h-8 w-8 rounded-full object-cover"/>
         </div>
         <div @click="router.push('/auth')" class="flex items-center cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
